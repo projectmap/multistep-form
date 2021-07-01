@@ -19,7 +19,7 @@ const Names=({formData,status,setForm,navigation,validateForm})=>{
     
         <TextFieldComponent handle={setForm} type="date" defaultdate={currentDate} style={{marginButton:"30px"}} label="Date of birth" name="birthDate" value={formData.birthDate}/>
         
-       <RadioComponent setForm={setForm} />
+       <RadioComponent setForm={setForm} formData={formData} />
      <NextButton status={status} navigation={navigation} />
        </form> </Container>
     )

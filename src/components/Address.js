@@ -15,7 +15,7 @@ const Address=({setForm,navigation,formData})=>{
     <Container maxWidth="sm"><form name="testForm">
         <h2>Address</h2>
         <label style={{float:"left",color:"#abb0ac"}} for="state">Choose your state:</label>
-<Select onChange={setForm} fullWidth style={{float:"left",marginLeft:"20px",height:"30px",width:"100px"}} name="state" id="state">
+<Select onChange={setForm} fullWidth style={{float:"left",marginLeft:"20px",height:"30px",width:"100px"}} name="state" value={formData.state} id="state">
   <MenuItem value="state1">state 1</MenuItem>
   <MenuItem value="state2">state 2</MenuItem>
   <MenuItem value="state3">state 3</MenuItem>
@@ -28,7 +28,7 @@ const Address=({setForm,navigation,formData})=>{
 
 <div >
 <label style={{color:"#abb0ac"}} for="city">Choose your city:</label>
-<Select onChange={setForm} style={{marginLeft:"20px",height:"30px",width:"100px"}} name="city" id="city">
+<Select onChange={setForm} style={{marginLeft:"20px",height:"30px",width:"100px"}} value={formData.city} name="city" id="city">
   <MenuItem value="Kathmandu">Kathmandu</MenuItem>
   <MenuItem value="Birendranagar">Birendrenagar</MenuItem>
   <MenuItem value="Narayanghat">Narayanghat</MenuItem>
@@ -39,7 +39,7 @@ const Address=({setForm,navigation,formData})=>{
       
         <TextField label="Tole" style={{marginButton:"30px"}} fullWidth value={formData.tole} onChange={setForm} margin="normal" autoComplete="off" name="tole"/> 
         <label style={{float:"left",color:"#abb0ac"}} for="state">Choose your ward No:</label>
-<Select onChange={setForm} fullWidth style={{float:"left",marginLeft:"20px",marginButton:"50px" ,display:"block",height:"30px",width:"100px"}} name="ward" id="ward">
+<Select onChange={setForm} fullWidth style={{float:"left",marginLeft:"20px",marginButton:"50px" ,display:"block",height:"30px",width:"100px"}} name="ward" id="ward" value={formData.ward}>
   <MenuItem value="1"> 1</MenuItem>
   <MenuItem value="2"> 2</MenuItem>
   <MenuItem value="3"> 3</MenuItem>

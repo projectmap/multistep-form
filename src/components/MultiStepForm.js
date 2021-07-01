@@ -15,7 +15,7 @@ const defaultData={
     motherName:"",
     nationality:"",
     birthDate:"",
-    
+    gender:"",
     gendera:"male",
     genderb:"female",
     genderc:"other",
@@ -27,7 +27,8 @@ const defaultData={
     mobile:"",
     email:"",
     age:"",
-    education:""
+    education:"",
+    signatureURL:""
 }
 
 
@@ -46,7 +47,8 @@ const MultiStepForm=()=>{
     const [status,setEnable]=useState("true");
     const {step,navigation}=useStep({steps,initialStep:0});
    let props={formData,setForm,navigation,validateForm,status};
-
+   const fd = new window.FormData()
+  console.log("formdata",fd);
    function validateForm() {
    // var x = document.forms["testForm"]["firstName"].value;
 
